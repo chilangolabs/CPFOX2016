@@ -1,4 +1,77 @@
 extends ./layout.jade
 
 block content
-  p ayylmao
+  .navbar-fixed
+    nav
+      .nav-wrapper
+        ul.right.hide-on-med-and-down
+          li
+            a Login
+          li
+            a.modal-trigger(href="#modal") Unete
+  .parallax-container
+    .parallax.headerimg
+      .headertext 
+        h2 Unete y crea un nuevo futuro
+        h4 juntos podemos crear cosas nuevas
+      img(src="/img/landingheader.jpg")
+  .section.white
+    .row.container
+      h3.header Awesome proyect
+      .grey-text.text-darken-3.lighten-3
+        p.flow-text Ayudando a crear futuros
+      .row
+        .col.s4
+          .card.medium
+            .card-image
+              img(src="/img/maestrajuana.JPG")
+            .card-content
+              h5 Mariana Estrada
+              p Chilpancingo, Guerrero
+            .card-action
+              a.modal-trigger(href="#modal") Participa
+        .col.s4
+          .card.medium
+            .card-image
+              img(src="/img/maestropepe.jpg")
+            .card-content
+              h5 Ernesto Rodriguez
+              p Sauz de Armenta, Guanajuato
+            .card-action
+              a.modal-trigger(href="#modal") Participa
+        .col.s4
+          .card.medium
+            .card-image
+              img(src="/img/maestragabyu.jpg")
+            .card-content
+              h5 Gabriela Hernandez
+              p Xicoténcatl, Tamaulipas
+            .card-action
+              a.modal-trigger(href="#modal") Participa
+  .parallax-container
+    .parallax.headerimg
+      .headertext
+        h2 No te quedes fuera de mejorar
+        h4 la vida de alguien mas
+      img(src="/img/landingfooter.jpg")
+  #modal.modal
+    .modal-content
+      h3 Unete y participa como:
+      .row.headerimg
+        .col.s4
+          a.headerimg(href="registro")
+            i.large.material-icons person_pin
+            h6 Donador
+        .col.s4
+          a.headerimg(href="registro")
+            i.large.material-icons assignment_ind
+            h6 Proyecto con causa
+  append javascript
+    script.
+      $(document).ready(function(){
+        $('.parallax').parallax();
+      });
+      $(document).ready(function(){
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal-trigger').leanModal();
+      });

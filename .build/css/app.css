@@ -1,11 +1,12 @@
-.headerimg{
+/* line 1, css/app */
+.headerimg {
   justify-content: center;
   align-items: center;
   display: flex;
 }
-
-.headertext{
+/* line 7, css/app */
+.headertext {
   z-index: 100;
-  color:white;
+  color: white;
   text-align: center;
 }

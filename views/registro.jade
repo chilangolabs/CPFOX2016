@@ -1,4 +1,17 @@
 extends ./layout.jade
 
 block content
-  p formulario
+  .navbar-fixed
+    nav
+      .nav-wrapper
+        ul.right.hide-on-med-and-down
+          li
+            a Login
+          li
+            a.modal-trigger(href="#modal") Unete
+  .row
+    form.col.s12
+      .row 
+        .input-field.col.s6
+          input#name.validate(type="text")
+          label(for="name") Nombre
