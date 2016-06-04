@@ -9,9 +9,34 @@ block content
             a Login
           li
             a.modal-trigger(href="#modal") Unete
-  .row
+  .row.container
+    h3 Registro
     form.col.s12
       .row 
         .input-field.col.s6
+          i.material-icons.prefix account_circle
           input#name.validate(type="text")
           label(for="name") Nombre
+      .row 
+        .input-field.col.s6
+          i.material-icons.prefix query_builder
+          input#age.validate(type="number")
+          label(for="age") Edad
+      .row 
+        .input-field.col.s6
+          i.material-icons.prefix language
+          input#localidad.validate(type="text")
+          label(for="localidad") Localidad
+      .row 
+        .input-field.col.s6
+          i.material-icons.prefix email
+          input#mail.validate(type="email")
+          label(for="mail") Correo electronico
+      .row 
+        .input-field.col.s6
+          i.material-icons.prefix verified_user
+          input#pass.validate(type="password")
+          label(for="pass") Contraseña
+          .row 
+            .input-field.col.s8.right-align
+              button.btn.waves-effect.waves-light(type="submit" name="action") Enviar
