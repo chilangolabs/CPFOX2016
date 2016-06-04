@@ -1,29 +1,34 @@
 {
-
-    
-
-    
-
-    
-
-    "specialization": {
+  "express": {
+    "env": "", // NOTE: `env` is managed by the framework. This value will be overwritten.
+    "x-powered-by": false,
+    "trust proxy": false,
+    "jsonp callback name": null,
+    "json replacer": null,
+    "json spaces": 0,
+    "case sensitive routing": false,
+    "strict routing": false,
+    "view cache": false,
+    "view engine": "jade",
+    "views": "path:./views",
+    "route": "/"
+  },
+  "middleware": {
+    "static": {
+      "module": {
+        "arguments": [
+          "path:./.build"
+        ]
+      }
     },
-
-    "middleware": {
-
-        
-
-        "static": {
-            "module": {
-                "arguments": [ "path:./.build" ]
-            }
-        },
-
-        "router": {
-            "module": {
-                "arguments": [{ "directory": "path:./controllers" }]
-            }
-        }
-
+    "router": {
+      "module": {
+        "arguments": [
+          {
+            "directory": "path:./controllers"
+          }
+        ]
+      }
     }
+  }
 }
