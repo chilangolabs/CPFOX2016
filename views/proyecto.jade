@@ -2,18 +2,16 @@ extends ./layout.jade
 
 block content
   .navbar-fixed
-    nav
+    nav.teal.lighten
       .nav-wrapper
         ul.right.hide-on-med-and-down
           li
-            a Login
-          li
-            a.modal-trigger(href="#modal") Unete
+            a Proyecto nuevo
   .parallax-container
     .parallax.headerimg
       .headertext 
-        h2 Proyecto Z
-      img(src="/img/landingheader.jpg")
+        h2 Clases para los niños Tarahumara.
+      img(src="/img/proyectimg.jpg")
   .section.white
     .row.container
       .col.s8
@@ -22,23 +20,25 @@ block content
         a.waves-effect.waves-light.btn-large
           | Donar
       .row.container
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. In blandit fringilla varius. Donec suscipit congue libero a pretium. Pellentesque ut sem sagittis, vulputate nunc nec, egestas lorem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse hendrerit nec dui eget tempus. Ut a mauris efficitur, tristique justo sit amet, pretium diam. Nulla hendrerit sem eget nulla aliquet ornare a non felis. Nulla commodo sapien quis nibh posuere sollicitudin. Nam sagittis consequat aliquam. Nulla a dui consequat, luctus justo quis, mollis neque. Vestibulum faucibus finibus vehicula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris non nunc et ante congue lobortis. Aenean consectetur, metus quis congue cursus, justo eros vulputate sapien, ut congue urna augue eu diam. Aenean posuere purus eu dui mollis iaculis et non justo. 
+        p.flow-text  
+          | En la sierra Tarahumara no hay ninguna escuela cercana y por lo tanto, los niños no asisten, por lo que se quiere llevar clases de alfabetización y regularización para niños y jóvenes de diferentes edades y así brindarles la oportunidad de tener un mejor futuro. Para esto es necesario contar con tu apoyo en cualquiera de las modalidades que permite esta plataforma. A continuación encontrarás las donaciones que necesitamos. 
+          | Muchas gracias por apoyar nuestro proyecto. 
+        h3 Materiales
         ul
-          li Objetivo 1
-          li Objetivo 2
-          li Objetivo 3
-          li Objetivo 4
-          li Objetivo 5
-          li Objetivo 6
-          li Objetivo 7
-          li Objetivo 8
+          li 80 cuadernos tamaño profesional
+          li 80 lápices
+          li 80 gomas
+          li 80 sacapuntas
+          li 20 pupitres
+          li 1 Pizarrón
+        h3 Voluntariado
+        ul
+          li 3 profesores
+          li 3 asistentes.
+        h3 Monetario
+        p Donativos a partir de $50 para viáticos de los voluntarios y compra de materiales faltantes.
   append javascript
     script.
       $(document).ready(function(){
         $('.parallax').parallax();
-      });
-      $(document).ready(function(){
-        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-        $('.modal-trigger').leanModal();
       });
