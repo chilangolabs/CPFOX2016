@@ -5,7 +5,7 @@ var paypal = require('paypal-rest-sdk');
 module.exports = function(router) {
 
   router.get('/', function(req, res, next) {
-    var monto = req.body.monto || '100';
+    var monto = req.query.monto || 100;
 
     if (!monto) {
       res.sendStatus(400); // TODO
@@ -23,7 +23,7 @@ module.exports = function(router) {
         'payment_method': 'paypal'
       },
       'redirect_urls': {
-        'return_url': 'http://proceso.premiorazondeser.mx/', // TODO
+        'return_url': 'http://localhost:8000/view/pago_exitoso', // TODO
         'cancel_url': 'http://cineguru.com.mx' // TODO
       },
       'transactions': [{

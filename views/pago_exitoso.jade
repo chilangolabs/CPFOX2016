@@ -1,0 +1,36 @@
+extends ./layout.jade
+
+block content
+  .navbar-fixed
+    nav.teal.lighten
+      .nav-wrapper
+        ul.right.hide-on-med-and-down
+          li
+            a(href="proyectos") Login
+          li
+            a.waves-effect.waves-light.amber.darken-4.btn(href="registro") Unete
+  .parallax-container
+    .parallax.headerimg
+      .headertext 
+        h2.text-shadow ¡Gracias!
+        h4.text-shadow Has contribuido a generar un cambio
+        h4.text-shadow en la educación en México.
+      img(src="/img/landingheader.jpg")
+  .section.white
+    .row.container
+      .s12.offset-6
+        .card.light-green.darken-1
+          .card-content
+            span.card-title Pago realizado exitósamente
+            p ¡Muchas gracias por donar asdasdasdasdadsasd
+          .card-action.right-align
+            a.black-text(href='/') Ok
+  append javascript
+    script.
+      $(document).ready(function(){
+        $('.parallax').parallax();
+      });
+      $(document).ready(function(){
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal-trigger').leanModal();
+      });
