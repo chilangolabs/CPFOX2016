@@ -4,8 +4,8 @@ var paypal = require('paypal-rest-sdk');
 
 module.exports = function(router) {
 
-  router.post('/', function(req, res, next) {
-    var monto = req.body.monto;
+  router.get('/', function(req, res, next) {
+    var monto = req.query.monto || 100;
 
     if (!monto) {
       res.sendStatus(400); // TODO
