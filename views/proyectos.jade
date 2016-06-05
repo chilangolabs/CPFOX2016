@@ -33,7 +33,6 @@ block content
             .card-content
               h5.black-text Alfabetización para jóvenes campesinos.
               p.black-text Se realizará una jornada de alfabetización para jóvenes campesinos de la región sureste del país para ofrecerles más oportunidades en la vida y ayudarles en su desarrollo personal. Se pretende que dicha campaña se lleve a cabo en el mes de noviembre de 2016…
-    .row
       .col.s4
         a(href='/proyecto')
           .card.medium
@@ -58,3 +57,13 @@ block content
             .card-content
               h5.black-text Clases para los niños Tarahumara.
               p.black-text En la sierra Tarahumara no hay ninguna escuela cercana y por lo tanto, los niños no asisten a ninguna, por lo que se quiere llevar clases de alfabetización y regularización para niños y jóvenes de diferentes edades y así brindarles la oportunidad de tener un mejor futuro.
+      if projects
+        each project in projects
+          .col.s4
+            a(href='/proyecto/#{project._id}')
+              .card.medium
+                .card-image
+                  img(src="/img/proyectimg.jpg")
+                .card-content
+                  h5.black-text #{project.name}
+                  p.black-text En la sierra Tarahumara no hay ninguna escuela cercana y por lo tanto, los niños no asisten a ninguna, por lo que se quiere llevar clases de alfabetización y regularización para niños y jóvenes de diferentes edades y así brindarles la oportunidad de tener un mejor futuro.

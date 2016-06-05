@@ -1,6 +1,6 @@
 'use strict';
 
-var Donator = require('../models/Donator');
+var Project = require('../models/Project');
 var crypto   = require('crypto');
 
 module.exports = function(router) {
@@ -10,6 +10,13 @@ module.exports = function(router) {
       res.render('registroproyecto');
     })
     .post(function(req, res, next) {
-      res.redirect('/proyectos');
+      console.log('#############', req.files);
+      req.body.image = req.files.image.path.split('/').pop();
+      var proyecto = new Project(req.body);
+
+      proyecto.save(function(error) {
+        if (error) {return next(error);}
+        res.redirect('/proyectos');
+      });
     });
 };

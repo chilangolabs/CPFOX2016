@@ -9,7 +9,7 @@ block content
             a.waves-effect.waves-light.amber.darken-4.btn(href="registroproyecto") Proyecto nuevo
   .row.container
     h3 Registro de Proyecto
-    form.col.s12(method="post")
+    form.col.s12(method="post" enctype="multipart/form-data")
       .row 
         .input-field.col.s6
           i.material-icons.prefix view_list
@@ -19,13 +19,13 @@ block content
           .file-field.input-field
             .btn
               span Imagen
-              input(type="file")
+              input(type="file" name="image")
             .file-path-wrapper
-              input.file-path.validate(type="text" name="imgproyect")
+              input.file-path.validate(type="text")
       .row 
         .input-field.col.s6
           i.material-icons.prefix language
-          input#localidad.validate(type="text" name="localidad")
+          input#localidad.validate(type="text" name="loc")
           label(for="localidad") Localidad
       .row 
         .input-field.col.s6
@@ -35,7 +35,7 @@ block content
       .row 
         .input-field.col.s6
           i.material-icons.prefix description
-          textarea#descrip.materialize-textarea(name="descrip")
+          textarea#descrip.materialize-textarea(name="desc")
           label(for="descrip") Descripción del proyecto
       .row 
         .input-field.col.s6
@@ -45,12 +45,12 @@ block content
       .row 
         .input-field.col.s6
           i.material-icons.prefix recent_actors
-          textarea#voluntarios.materialize-textarea(name="voluntarios")
+          textarea#voluntarios.materialize-textarea(name="volunteers")
           label(for="voluntarios") Voluntarios
       .row 
         .input-field.col.s6
           i.material-icons.prefix trending_up
-          input#apoyo.validate(type="text" name="apoyo")
+          input#apoyo.validate(type="text" name="economic")
           label(for="apoyo") Apoyo monetario
       .row 
         .input-field.col.s6.right-align

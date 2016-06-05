@@ -9,12 +9,14 @@ app.on('start', function() {
 
 var ProjectSchema = {
   name: String,
-  endOfCampain: Number,
+  endOfCampain: Date,
   loc: String,
-  helpsIn: [String],
-  wishList: [String],
   mail: String,
-  password: String
+  desc: String,
+  materials: String,
+  volunteers: String,
+  economic: String,
+  image: String
 };
 
 var Project = mongoose.model('Project', ProjectSchema);

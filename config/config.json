@@ -1,5 +1,6 @@
 {
   "mongo": "env:MONGO",
+  "tmpDir": "",
   "express": {
     "env": "", // NOTE: `env` is managed by the framework. This value will be overwritten.
     "x-powered-by": false,
@@ -15,10 +16,17 @@
     "route": "/"
   },
   "middleware": {
+    "multipart": {
+      "module": {
+        "arguments": [{"uploadDir": "path:./public/uploads/"}],
+        "name": "kraken-js/middleware/multipart"
+      }
+    },
     "static": {
       "module": {
         "arguments": [
-          "path:./.build"
+          "path:./.build",
+          "config:tmpDir"
         ]
       }
     },
@@ -34,7 +42,7 @@
     },
     "viewshelpers": {
       "enabled":  true,
-      "priority": 112, 
+      "priority": 112,
       "module": {
         "name": "view-helpers"
       }

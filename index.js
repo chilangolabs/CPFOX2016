@@ -2,6 +2,7 @@
 
 var express = require('express');
 var kraken = require('kraken-js');
+var os = require('os');
 
 var options; var app;
 
@@ -15,6 +16,8 @@ options = {
        * Add any additional config setup or overrides here. `config` is an initialized
        * `confit` (https://github.com/krakenjs/confit/) configuration object.
        */
+      config.set('tmpDir', os.tmpDir());
+      console.log(config.get('tmpDir'));
       next(null, config);
     }
   };
