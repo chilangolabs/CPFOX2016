@@ -23,7 +23,7 @@ module.exports = function(router) {
         'payment_method': 'paypal'
       },
       'redirect_urls': {
-        'return_url': 'http://proceso.premiorazondeser.mx/', // TODO
+        'return_url': 'http://localhost:8000/view/pago_exitoso', // TODO
         'cancel_url': 'http://cineguru.com.mx' // TODO
       },
       'transactions': [{
