@@ -10,8 +10,9 @@ block content
           li
             a.waves-effect.waves-light.amber.darken-4.btn(href="registro") Unete
   .row.container
+    +alerts()
     h3 Registro
-    form.col.s12
+    form.col.s12(method="POST")
       .row 
         .input-field.col.s6
           i.material-icons.prefix account_circle

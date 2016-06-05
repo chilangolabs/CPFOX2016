@@ -10,13 +10,16 @@
     "all": "npm run build && npm run test"
   },
   "dependencies": {
+    "connect-flash": "^0.1.1",
     "construx": "^1.0.0",
     "construx-copier": "^1.0.0",
     "construx-less": "^1.0.0",
     "eslint": "^1.10.3",
     "express": "^4.12.2",
     "jade": "^1.11.0",
-    "kraken-js": "^1.0.3"
+    "kraken-js": "^1.0.3",
+    "mongoose": "^4.4.19",
+    "view-helpers": "^0.1.5"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

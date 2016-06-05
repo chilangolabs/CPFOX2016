@@ -7,6 +7,13 @@ html(lang='es')
     link(rel="stylesheet" href="/css/app.css")
     block head
   body
+    mixin alerts
+      if errors
+        .container
+          .row
+            .col.l6.s12
+              each error in errors
+                p #{error}
     block content
     block javascript
       script(type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js")
