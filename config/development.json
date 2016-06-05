@@ -1,4 +1,9 @@
 {
+  "paypal": {
+    "clientId": "AStveJs2i6KGOni4tzIfqkTCCFDkBa3SYoovIX2kqZpM5WjwNwxZX0uPAb_usxdoJFlYUUiF6apGpTrc",
+    "secret": "EAg8HzVwIc-fb2hbaIv-ZrA6hLvJrKYF1wrBXzc-_9GP34tVBE15FOesQv4jLoZcA2Oez4l6Mak0fsMw"
+  },
+
   "middleware": {
     "devtools": {
       "enabled": true,
