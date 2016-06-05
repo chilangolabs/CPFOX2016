@@ -19,6 +19,7 @@
     "jade": "^1.11.0",
     "kraken-js": "^1.0.3",
     "mongoose": "^4.4.19",
+    "paypal-rest-sdk": "^1.6.8",
     "view-helpers": "^0.1.5"
   },
   "devDependencies": {
